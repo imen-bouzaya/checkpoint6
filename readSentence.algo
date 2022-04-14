@@ -1,0 +1,21 @@
+ALGORITHM readSentence
+VAR
+    i: INTEGER:=0;
+    s:STRING:='';
+    contCaracters: INTEGER:=0;
+    contWords: INTEGER:=1;
+    contVowels: INTEGER:=0;
+BEGIN
+    Read(s)
+    contCaracters:=s.length;
+    Write("la longueur  de la phrase est",contCaracters);
+
+    FOR i FROM 0 TO contCaracters-1 STEP 1  DO
+        IF (s[i]==" ") THEN
+            contWords++;
+        END_IF
+        IF (s[i]=="a" || s[i]=="e" || s[i]=="u" || s[i]=="i" || s[i]=="o" s[i]=="A" || s[i]=="E" || s[i]=="U" || s[i]=="I" || s[i]=="O") THEN
+            contVowels++;
+        END_IF
+    END_FOR
+END
